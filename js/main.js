@@ -53,10 +53,18 @@ console.log(formatString('Lorem ipsum dolor sit amet, consectetur adipiscing eli
   
 //5
 function checkForSpam(message) {
-    const lowerCaseMessage = message.toLowerCase();
-  
+    if (message.includes("sale")) {
+        return message.includes("sale");
+    }
+    if (message.includes("spam")) {
+        return message.includes("spam")
+    }
+    return false;
 }
-
+console.log(checkForSpam("spam"));
+console.log(checkForSpam("sale"));
+console.log(checkForSpam("hi how are youuuuuu"));
+console.log(checkForSpam("Hello world"));
 //6
 
 

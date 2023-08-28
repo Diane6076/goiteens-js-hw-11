@@ -65,8 +65,29 @@ console.log(checkForSpam("spam"));
 console.log(checkForSpam("sale"));
 console.log(checkForSpam("hi how are youuuuuu"));
 console.log(checkForSpam("Hello world"));
+
 //6
+const numbers = [];
 
+while (true) {
+  const input = prompt("Введіть число:");
 
-//7
+if (input === null) {
+    break;
+}
   
+const parsedInput = parseFloat(input);
+  
+if (!isNaN(parsedInput)) {
+    numbers.push(parsedInput);
+} else {
+    alert("Введено некоректне число. Спробуйте ще раз.");
+}
+}
+
+let totalNum = 0;
+for (const number of numbers) {
+  totalNum += number;
+}
+
+console.log(`Загальна сума чисел дорівнює ${totalNum}`);
